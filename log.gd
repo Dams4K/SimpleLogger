@@ -14,5 +14,8 @@ static func info(message: Variant) -> void:
 static func warn(message: Variant) -> void:
 	push_warning("[WARNING] ", message)
 
+static func warnif(cond: bool, message: Variant) -> void:
+	if cond: warn(message)
+
 static func error(message: Variant) -> void:
 	push_error("[ERROR] ", message)
